@@ -13,6 +13,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         't/sendmessage',
-        'bot/start'
+        'bot/start',
+        't/sendimage'
     ];
 }

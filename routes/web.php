@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;;
 use Telegram\Bot\Laravel\Facades\Telegram;
+use Telegram\Bot\FileUpload\InputFile;
 use App\Http\Controllers\TelegramController;
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ Route::get('t/getupdates', function() {
 Route::post('t/sendmessage', function() {
     Telegram::sendMessage([
         'chat_id' => '987613379',
-        'text' => 'Hello world!'
+        'text' => 'Askida günaydıııııın mesajı'
     ]);
 
     return response()->json([
@@ -34,5 +35,16 @@ Route::post('t/sendmessage', function() {
     ]);
 });
 
+Route::post('t/sendimage', function() {
+    Telegram::sendPhoto([
+        'chat_id' => '987613379',
+        'photo' => InputFile::create('C:\Users\hudan\Downloads\sad.jpeg'),
+        'caption' => 'Bu şekil güne başladık'
+    ]);
 
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Mesaj başarıyla gönderildi'
+    ]);
+});
 
