@@ -36,12 +36,19 @@ Route::post('t/sendmessage', function() {
 });
 
 Route::post('t/sendimage', function() {
+    $photos=[InputFile::create('C:\Users\hudan\Downloads\sad.jpeg'),InputFile::create('C:\Users\hudan\Downloads\sad2.jpeg'),InputFile::create('C:\Users\hudan\Downloads\sad3.jpeg')];
+    $i = session('photo_index', 0); // Oturumdan `$i` değerini al
+    $chat_id='987613379';
+    if ($i >= count($photos)) {
+        $i = 0; // Eğer `$i` değeri fotoğraf listesinin sınırlarını aştıysa sıfırla
+    }
     Telegram::sendPhoto([
-        'chat_id' => '987613379',
-        'photo' => InputFile::create('C:\Users\hudan\Downloads\sad.jpeg'),
+        'chat_id' => $chat_id,
+        'photo' => $photos[$i],
         'caption' => 'Bu şekil güne başladık'
     ]);
-
+    $i++;
+    session(['photo_index' => $i]); // Oturuma güncellenmiş `$i` değerini kaydet
     return response()->json([
         'status' => 'success',
         'message' => 'Mesaj başarıyla gönderildi'
