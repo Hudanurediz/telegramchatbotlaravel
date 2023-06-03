@@ -34,7 +34,7 @@ return [
         'mybot' => [
             'driver' => 'telegram',
             'username'=>'gunaydinmesajibot',
-            'token' => env('TELEGRAM_BOT_TOKEN', '6247319241:AAEhmDfdD5t0ecRxsg7rSd_64Bk8g-8HQos'),
+            'token' => env('TELEGRAM_BOT_TOKEN', 'your-token'),
             'certificate_path' => env('TELEGRAM_CERTIFICATE_PATH', 'YOUR-CERTIFICATE-PATH'),
             'commands' => [
                 //Acme\Project\Commands\MyTelegramBot\BotCommand::class
