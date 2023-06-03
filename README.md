@@ -1,4 +1,4 @@
-Laravel Telegram Chatbot
+#Laravel Telegram Chatbot
 
 Laravel frameworku ile localde çalışan bir chatbot oluşturuldu. Bu chatbot yapılan HTTP istekleri sonucunda chatid'si verilen kullanıcıya görsel veya text olarak mesaj gönderir. 
 
