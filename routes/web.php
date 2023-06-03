@@ -25,8 +25,8 @@ Route::get('t/getupdates', function() {
 
 Route::post('t/sendmessage', function() {
     Telegram::sendMessage([
-        'chat_id' => '987613379',
-        'text' => 'Askida günaydıııııın mesajı'
+        'chat_id' => '',//userchatid
+        'text' => 'Askıda günaydın mesajı'
     ]);
 
     return response()->json([
