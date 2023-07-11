@@ -12,4 +12,4 @@ Laravel frameworku ile localde çalışan bir chatbot oluşturuldu. Bu chatbot y
 
 ## Bot tarafından gönderilen mesaj(response)
 
-![Adsız tasarım](https://github.com/Hudanurediz/telegramchatbotlaravel/assets/73705686/3b614f43-3c81-4c7f-b985-b85f40445002)
+İstek türüne göre görsel veya text olarak yanıt döndürülür.
